@@ -12,11 +12,11 @@ const image = require ('./Controllers/image');
 const db = knex({
   client: 'pg',
   connection: {
-    host : 'dpg-cmn84hn109ks739dd23g-a',
+    host : process.env.DB_HOST,
     port: 5432,
-    user : 'brainodb_v7cl_user',
-    password : '0pvoOI4ZMXNHOQjIA4WQSF4r7v83FfBe',
-    database : 'brainodb_v7cl'
+    user : process.env.DB_USER,
+    password : process.env.DB_PW,
+    database : process.env.DB_NAME
   }
 });
 
